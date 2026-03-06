@@ -1,22 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Andrew Santoso</title>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrew Santoso</title>
+  <style>
+    :root {
+      --text: #111111;
+      --muted: #666666;
+      --bg: #fcfcf9;
+      --line: #e8e6df;
+
+      /* golden-ratio-ish spacing scale */
+      --s1: 0.75rem;
+      --s2: 1.2rem;
+      --s3: 1.95rem;
+      --s4: 3.15rem;
+      --s5: 5.1rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 18px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: var(--s5) var(--s3);
+    }
+
+    header {
+      margin-bottom: var(--s5);
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      line-height: 1.05;
+      font-weight: 500;
+      margin: 0 0 var(--s1) 0;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin: 0 0 var(--s3) 0;
+    }
+
+    nav {
+      display: flex;
+      gap: var(--s2);
+      flex-wrap: wrap;
+      font-size: 0.98rem;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    nav a:hover {
+      border-bottom-color: var(--text);
+    }
+
+    section {
+      margin-top: var(--s5);
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 0 0 var(--s2) 0;
+    }
+
+    p {
+      margin: 0 0 var(--s2) 0;
+    }
+
+    .list {
+      display: grid;
+      gap: var(--s2);
+    }
+
+    .item {
+      padding: 0 0 var(--s2) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .item a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .item a:hover {
+      text-decoration: underline;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 0.2rem;
+    }
+
+    footer {
+      margin-top: var(--s5);
+      padding-top: var(--s3);
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      html {
+        font-size: 17px;
+      }
+
+      .page {
+        padding: var(--s4) var(--s2);
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <h1>Andrew Santoso</h1>
-  <p>Welcome to my website.</p>
+  <main class="page">
+    <header>
+      <h1>Andrew Santoso</h1>
+      <p class="subtitle">I'm just a dude making his website.</p>
 
-  <h2>Articles</h2>
-  <ul>
-    <li>Coming soon</li>
-  </ul>
+      <nav>
+        <a href="/articles">Articles</a>
+        <a href="/projects">Projects</a>
+        <a href="/about">About</a>
+      </nav>
+    </header>
 
-  <h2>Projects</h2>
-  <ul>
-    <li>AI agent project</li>
-  </ul>
+    <section>
+      <p>
+        I write about things and I code a bit.
+      </p>
+    </section>
+
+    <section>
+      <h2>Recent writing</h2>
+      <div class="list">
+        <article class="item">
+          <a href="/articles/">Test article 1</a>
+          <div class="meta">Test 1</div>
+        </article>
+
+        <article class="item">
+          <a href="/articles/">Test article 2</a>
+          <div class="meta">Test 2</div>
+        </article>
+
+        <article class="item">
+          <a href="/articles/">Test article 3</a>
+          <div class="meta">Test 3</div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="list">
+        <article class="item">
+          <a href="/projects/ai-agent">AI Agent</a>
+          <div class="meta">Experiments with tools, memory, and workflows</div>
+        </article>
+
+        <article class="item">
+          <a href="/projects/personal-site">Personal Website</a>
+          <div class="meta">A minimalist home for writing and projects</div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>Settling down once again.</p>
+    </footer>
+  </main>
 </body>
 </html>
