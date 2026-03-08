@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andrew Santoso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --text: #111111;
@@ -46,12 +49,13 @@
     }
 
     h1 {
-      font-size: 2.6rem;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 2.7rem;
       line-height: 1.05;
-      font-weight: 500;
+      font-weight: 600;
       margin: 0 0 var(--s1) 0;
       letter-spacing: -0.03em;
-    }
+}
 
     .subtitle {
       color: var(--muted);
@@ -59,11 +63,16 @@
       margin: 0 0 var(--s3) 0;
     }
 
+    h1, h2, nav {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+    }
+
     nav {
+      font-family: "Inter", system-ui, sans-serif;
       display: flex;
       gap: var(--s2);
       flex-wrap: wrap;
-      font-size: 0.98rem;
+      font-size: 0.95rem;
     }
 
     nav a {
@@ -81,7 +90,8 @@
     }
 
     h2 {
-      font-size: 1.15rem;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 1.2rem;
       font-weight: 600;
       margin: 0 0 var(--s2) 0;
     }
@@ -128,7 +138,7 @@
       font-size: 0.95rem;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 680px) {
       html {
         font-size: 17px;
       }
@@ -155,51 +165,6 @@
         <a href="/about">About</a>
       </nav>
     </header>
-
-    <section>
-      <p>
-        I write about things and I code a bit.
-      </p>
-    </section>
-
-    <section>
-      <h2>Recent writing</h2>
-      <div class="list">
-        <article class="item">
-          <a href="/articles/">Test article 1</a>
-          <div class="meta">Test 1</div>
-        </article>
-
-        <article class="item">
-          <a href="/articles/">Test article 2</a>
-          <div class="meta">Test 2</div>
-        </article>
-
-        <article class="item">
-          <a href="/articles/">Test article 3</a>
-          <div class="meta">Test 3</div>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <div class="list">
-        <article class="item">
-          <a href="/projects/ai-agent">AI Agent</a>
-          <div class="meta">Experiments with tools, memory, and workflows</div>
-        </article>
-
-        <article class="item">
-          <a href="/projects/personal-site">Personal Website</a>
-          <div class="meta">A minimalist home for writing and projects</div>
-        </article>
-      </div>
-    </section>
-
-    <footer>
-      <p>Settling down once again.</p>
-    </footer>
   </main>
 </body>
 </html>
