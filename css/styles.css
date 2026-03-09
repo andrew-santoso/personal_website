@@ -1,8 +1,9 @@
 :root {
-  --text: #222222;
+  --text: #111111;
   --muted: #666666;
   --bg: #fcfcf9;
   --line: #e8e6df;
+
   --s1: 0.75rem;
   --s2: 1.2rem;
   --s3: 1.95rem;
@@ -24,6 +25,8 @@ body {
   color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .page {
@@ -50,12 +53,12 @@ nav,
     sans-serif;
 }
 
-h1.site-title {
+.site-title {
   font-size: 2.7rem;
   line-height: 1.05;
   font-weight: 500;
   margin: 0 0 var(--s1) 0;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
 .site-title a {
@@ -91,11 +94,68 @@ nav a.active {
   border-bottom-color: var(--text);
 }
 
-article {
+.main-content {
   margin-top: var(--s4);
 }
 
-.article-title {
+/* .content {
+  margin-top: var(--s4);
+} */
+
+.content p {
+  margin: 0 0 1.5rem 0;
+  font-size: 0.95rem;
+  max-width: 60ch;
+}
+
+/* Homepage / generic list styles */
+
+.list {
+  display: grid;
+  gap: var(--s2);
+}
+
+.item {
+  padding: 0 0 var(--s2) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Article list page */
+
+.list .article-title {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  max-width: 50ch;
+  margin: 0 0 0.6rem 0;
+}
+
+.list .article-title:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.list .article-meta {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* Individual article page */
+
+/* article {
+  margin-top: var(--s4);
+} */
+
+article .article-title {
   font-size: 1.35rem;
   line-height: 1.2;
   font-weight: 500;
@@ -104,14 +164,14 @@ article {
   max-width: 50ch;
 }
 
-.article-meta {
+article .article-meta {
   color: var(--muted);
   font-size: 1rem;
   margin-bottom: var(--s4);
 }
 
 .article-body p {
-  margin: 0 0 1.35rem 0;
+  margin: 0 0 1.5rem 0;
   font-size: 0.95rem;
   max-width: 60ch;
 }
@@ -123,6 +183,14 @@ article {
   color: var(--muted);
 }
 
+footer {
+  margin-top: var(--s5);
+  padding-top: var(--s3);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 @media (max-width: 680px) {
   html {
     font-size: 17px;
@@ -132,11 +200,12 @@ article {
     padding: var(--s4) var(--s2);
   }
 
-  h1.site-title {
+  .site-title {
     font-size: 2.2rem;
   }
 
-  .article-title {
+  .list .article-title,
+  article .article-title {
     font-size: 1.6rem;
   }
 }
