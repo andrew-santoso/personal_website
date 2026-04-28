@@ -116,8 +116,7 @@ nav a.active {
 }
 
 .item {
-  padding: 0 0 var(--s2) 0;
-  border-bottom: 1px solid var(--line);
+  padding: 0;
 }
 
 .item:last-child {
@@ -147,6 +146,7 @@ nav a.active {
 .list .article-meta {
   color: var(--muted);
   font-size: 1rem;
+  margin-bottom: 0;
 }
 
 /* Individual article page */
